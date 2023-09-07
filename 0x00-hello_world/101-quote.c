@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - C program that prints a quote to the standard error.
  *
- * Return: Always 0 (Success)
+ * Return: 1
  */
 
 int main(void)
 {
-	fprintf(stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	fputs("and that piece of art is useful\" -Dora Korpar, 2015-10-19\n", stdout);
 
 	return (1);
 }
