@@ -1,2 +1,2 @@
 #!/bin/bash
-file=$(echo $CFILE | cut -d. -f1) && gcc -c $CFILE -o $file
+gcc -c $CFILE -o ${CFILE%.c}
