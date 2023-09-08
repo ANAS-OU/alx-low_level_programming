@@ -18,11 +18,11 @@ int main(void)
 
 	/* checking if n negative or positive */
 	if (n > 0)
-		puts("is positive\n");
+		printf("%d is positive\n", n);
 	else if (n == 0)
-		puts("is zero\n");
+		puts("%d is zero\n", n);
 	else
-		puts("is negative\n");
+		puts("%d is negative\n", n);
 
 	return (0);
 }
