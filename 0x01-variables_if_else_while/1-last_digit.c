@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - program that generate a random number and print it last digit.
+ * main - program that generate a random number and print it last digit
  *
- * Return : always 0.
+ * Return: 0
  */
 
 int main(void)
