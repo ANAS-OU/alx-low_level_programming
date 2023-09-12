@@ -1,14 +1,14 @@
-#include<stdio.h>
+#include "main.h"
 
 /**
  * main - Simple program that prints the word "_putchar"
  *
- * return: 0
+ * Return: 0
  */
 
 int main(void)
 {
-	printf("_putchar\n");
+	_puts("_putchar");
 
 	return (0);
 }
