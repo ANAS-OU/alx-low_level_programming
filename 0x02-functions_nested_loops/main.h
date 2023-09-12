@@ -2,4 +2,9 @@
  * The prototypes of all your functions
  */
 
-int _putchar(char);
+#ifndef MAIN_H
+#define MAIN_H
+
+int _putchar(char c);
+
+#endif
