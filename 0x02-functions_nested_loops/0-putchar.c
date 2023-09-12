@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include "_putchar.h"
 #include "main.h"
 
 /**
@@ -8,7 +10,11 @@
 
 int main(void)
 {
-	_puts("_putchar");
+	char str[] = "_putchar\n";
+	int length = sizeof(str) / sizeof(str[0]);
+	
+	for(int i=0; i<length; i++)
+		_putchar(str[i]);
 
 	return (0);
 }
