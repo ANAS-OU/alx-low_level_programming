@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  *
  * function - that print the alphabet in lowercase
