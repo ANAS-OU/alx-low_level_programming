@@ -1,13 +1,14 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * print_multiples_sum - function that prints the multiples
+ * _start - function that prints the multiples
  * sum of a and b that less than 10.
  * @a: param 1.
  * @b: param 2.
  */
 
-void print_multiples_sum(int a, int b)
+void _start(int a, int b)
 {
 	int i, sum;
 
