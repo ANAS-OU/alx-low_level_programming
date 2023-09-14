@@ -2,8 +2,6 @@
 
 /**
  * main - simple program that use a function to check if
- * an integer is negative or positive.
- *
  * Return: 0
  */
 
