@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - simple program that use a function to check if
+ * main - simple program that use a positive_or_negative func
  * Return: 0
  */
 
