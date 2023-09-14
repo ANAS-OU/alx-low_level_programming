@@ -1,21 +1,20 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * _start - function that prints the multiples
+ * main - program that prints the multiples
  * sum of a and b that less than 10.
- * @a: param 1.
- * @b: param 2.
+ *
+ * Return: 0
  */
 
-void _start(int a, int b)
+int main(void)
 {
 	int i, sum;
 
 	sum = 0;
 	for (i = 1; i < 10; i++)
 	{
-		if (!(i % a) || !(i % b))
+		if (!(i % 3) || !(i % 5))
 			sum += i;
 	}
 	printf("%d\n", sum);
