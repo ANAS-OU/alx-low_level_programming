@@ -20,5 +20,5 @@ void print_number(int n)
 
 	if (nb / 10)
 		print_number(nb / 10);
-	_putchar(nb%10 + '0');
+	_putchar(nb % 10 + '0');
 }
