@@ -29,4 +29,6 @@ int main(void)
 		}
 	}
 	printf("%ld\n", lg_fact);
+
+	return (0);
 }
