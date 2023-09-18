@@ -1,4 +1,3 @@
-//#include <unistd.h>
 #include "main.h"
 
 /**
@@ -20,15 +19,3 @@ void puts2(char *str)
 	}
 	_putchar('\n');
 }
-/*void puts2(char *str)
-  {
-  char c;
-
-  c = '\n';
-  while (*str)
-  {
-  write(1, str, 1);
-  str += 2;
-  }
-  write(1, &c, 1);
-  }*/
