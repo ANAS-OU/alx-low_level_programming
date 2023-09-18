@@ -19,7 +19,7 @@ void print_rev(char *s)
 		s++;
 	}
 
-	while (i >= 0)
+	while (i > 0)
 	{
 		write(1, s, 1);
 		s--;
