@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 /**
  * rev_string - function that reverses a string in memory.
  * @s: pointer param.
