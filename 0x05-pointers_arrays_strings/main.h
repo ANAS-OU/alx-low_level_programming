@@ -11,5 +11,6 @@ void puts2(char*);
 int _putchar(char);
 void puts_half(char*);
 void print_array(int*, int);
+int _atoi(char*);
 
 #endif /* MAIN_H */
