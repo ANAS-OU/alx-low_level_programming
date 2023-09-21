@@ -7,24 +7,21 @@
 
 char *cap_string(char *str)
 {
-	char *p = str;
+	int i = 0;
 
-	if (*str >= 'a' && *str <= 'z')
+	if (str[i] >= 'a' && str[i] <= 'z')
 	{
-		*str -= 32;
-		str++;
+		str[i] -= 32;
 	}
-
-	while (*str != '\0')
+	while (str[i])
 	{
-		if (*str < '0' || (*str > '9' && *str < 'A') || *str > 'z')
+		if (str[i] < '0' || (str[i] > '9' && str[i] < 'A') || str[i] > 'z')
 		{
-			str++;
-			if (*str >= 'a' && *str <= 'z')
-				*str -= 32;
-			str--;
+			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+				str[i + 1] -= 32;
 		}
-		str++;
+		i++;
 	}
-	return (p);
+
+	return (str);
 }
