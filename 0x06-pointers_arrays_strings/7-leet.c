@@ -6,21 +6,20 @@
 
 char *leet(char *str)
 {
-	char *p = str;
+	int i, j;
+	char *letters = "aAeEoOtTlL";
+	char *numbers = "4433007711";
 
-	while (*str)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (*str == 'a' || *str == 'A')
-			*str = '4';
-		if (*str == 'e' || *str == 'E')
-			*str = '3';
-		if (*str == 'o' || *str == 'O')
-			*str = '0';
-		if (*str == 't' || *str == 'T')
-			*str = '7';
-		if (*str == 'l' || *str == 'L')
-			*str = '1';
-		str++;
+		for (j = 0; numbers[j] != '\0'; j++)
+		{
+			if (str[i] == letters[j])
+			{
+				str[i] = numbers[j];
+				break;
+			}
+		}
 	}
-	return (p);
+	return (str);
 }
