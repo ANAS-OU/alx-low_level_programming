@@ -10,7 +10,11 @@
 void print_number(int n)
 {
 	if (n == INT_MIN)
-		print_number(-2147483648);
+	{
+		_putchar('-');
+		_putchar('2');
+		print_number(147483648);
+	}
 
 	if (n < 0)
 	{
