@@ -10,10 +10,7 @@
 void print_number(int n)
 {
 	if (n == INT_MIN)
-	{
-		_putchar('-');
-		n = INT_MAX;
-	}
+		print_number(-2147483648);
 
 	if (n < 0)
 	{
