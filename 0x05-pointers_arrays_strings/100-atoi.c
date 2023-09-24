@@ -14,10 +14,8 @@ int _atoi(char *s)
 	sign = 0;
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == '+')
-			sign++;
 		if (s[i] == '-')
-			sign--;
+			sign++;
 
 		if (s[i] >= '0' && s[i] <= '9')
 			nb = nb * 10 + s[i] - '0';
@@ -26,7 +24,7 @@ int _atoi(char *s)
 			break;
 	}
 
-	if (sign < 0)
+	if (sign % 2 != 0)
 		nb = -nb;
 
 	return (nb);
