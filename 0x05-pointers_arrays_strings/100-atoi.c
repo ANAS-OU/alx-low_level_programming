@@ -1,3 +1,5 @@
+#include <stdbool.h>
+
 /**
  * _atoi - function that converts a string to an integer.
  * @s: pointer param.
@@ -6,31 +8,26 @@
 
 int _atoi(char *s)
 {
-	int i, nb;
+	int i, sign, nb;
 
-	i = 0;
 	nb = 0;
-	while (*s)
+	sign = 0;
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (*s >= '0' && *s <= '9')
-		{
-			i++;
-		//	if (*(s++) < '0' || *(s++) > '9')
-		//		break;
-		}
-		s++;
+		if (s[i] == '+')
+			sign++;
+		if (s[i] == '-')
+			sign--;
+
+		if (s[i] >= '0' && s[i] <= '9')
+			nb = nb * 10 + s[i] - '0';
+
+		if (nb > 0 && (s[i] < '0' || s[i] > '9'))
+			break;
 	}
 
-	while (*s)
-	{
-		if (*s >= '0' && *s <= '9')
-		{
-			if (i > 0)
-			{
-				nb += *s * i;
-			i--;
-		}
-		s++;
-	}
+	if (sign < 0)
+		nb = - nb;
+
 	return (nb);
 }
