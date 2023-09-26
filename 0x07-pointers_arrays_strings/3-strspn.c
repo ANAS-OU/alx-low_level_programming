@@ -1,5 +1,5 @@
 /**
- * function that gets the length of
+ * _strspn - function that gets the length of
  * a prefix substring.
  * @s: pointer param 1.
  * @accept: pointer param 2.
