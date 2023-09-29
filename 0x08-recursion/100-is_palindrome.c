@@ -1,19 +1,34 @@
 /**
+ * _strlen_recursion - function that returns
+ * the length of a string.
+ * @s: string param (pointer).
+ * Return: str length (integer).
+ */
+
+int _strlen_recursion(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(++s));
+}
+
+/**
  * check_if_is_palindrome - function that checks if the given string
  * is a palindrome.
- * @s1: param 1 (pointer).
- * @s2: param 2 (pointer).
+ * @s: string param 1 (pointer).
+ * @start: first index (integer).
+ * @end: last index (integer).
  * Return: 1 on success
  * Otherwise 0.
  */
 
-int check_if_is_palindrome(char *s1, char *s2)
+int check_if_is_palindrome(char *s, int start, int end)
 {
-	if (*s1 != *s2)
-		return (0);
-	else if (s1 == s2 || s1 - 1 == s2)
+	if (start >= end)
 		return (1);
-	return (check_if_is_palindrome(++s1, --s2));
+	else if (s[start] != s[end])
+		return (0);
+	return (check_if_is_palindrome(s, start + 1, end - 1));
 }
 
 /**
@@ -26,9 +41,8 @@ int check_if_is_palindrome(char *s1, char *s2)
 
 int is_palindrome(char *s)
 {
-	char *p = s;
+	int len;
 
-	while (*(s + 1))
-		s++;
-	return (check_if_is_palindrome(p, s));
+	len = _strlen_recursion(s);
+	return (check_if_is_palindrome(s, 0, len - 1));
 }
