@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "3-atoi.c"
+#include <stdlib.h>
 
 /**
  * main - program that multiplies two numbers and prints
@@ -12,9 +12,15 @@ int main(int argc, char **argv)
 {
 	int i, mult;
 
+	if (argc < 2)
+	{
+		printf("error: missing command line arguments\n");
+		return (1);
+	}
+
 	mult = 1;
 	for (i = 1; i < argc; i++)
-		mult *= _atoi(argv[i]);
+		mult *= atoi(argv[i]);
 	printf("%d\n", mult);
 	return (0);
 }
