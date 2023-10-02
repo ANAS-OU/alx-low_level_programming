@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
 	if (argc < 2)
 	{
-		printf("error: missing command line arguments\n");
+		printf("Error\n");
 		return (1);
 	}
 
