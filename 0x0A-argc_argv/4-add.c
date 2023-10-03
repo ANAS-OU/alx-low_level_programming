@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 
 	while (--argc)
 	{
-		for (c = argv[argc]; *c != '\0'; c++)
+		for (c = argv[argc]; *c; c++)
 		{
 			if (*c < '0' || *c > '9')
 			{
