@@ -13,6 +13,7 @@ int main(int argc, char **argv)
 	char *c;
 	int sum;
 
+	sum = 0;
 	while (--argc)
 	{
 		for (c = argv[argc]; *c; c++)
