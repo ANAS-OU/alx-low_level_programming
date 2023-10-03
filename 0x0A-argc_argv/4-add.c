@@ -10,13 +10,12 @@
  */
 int main(int argc, char **argv)
 {
-	int i;
 	char *c;
 	unsigned int sum;
 
-	for (i = 1; i < argc; i++)
+	while (--argc)
 	{
-		for (c = argv[i]; *c; c++)
+		for (c = argv[argc]; *c != '\0'; c++)
 		{
 			if (*c < '0' || *c > '9')
 			{
@@ -24,7 +23,7 @@ int main(int argc, char **argv)
 				return (1);
 			}
 		}
-		sum += atoi(argv[i]);
+		sum += atoi(argv[argc]);
 	}
 	printf("%d\n", sum);
 	return (0);
