@@ -13,13 +13,6 @@ int main(int argc, char **argv)
 	int i;
 	unsigned int sum;
 
-	if (argc < 2)
-	{
-		printf("0\n");
-		exit(EXIT_SUCCESS);
-	}
-
-	sum = 0;
 	for (i = 1; i < argc; i++)
 	{
 		if (!atoi(argv[i]))
