@@ -13,6 +13,12 @@ int main(int argc, char **argv)
 	char *c;
 	unsigned int sum;
 
+	if (argc < 2)
+	{
+		printf("0\n");
+		return (0);
+	}
+
 	while (--argc)
 	{
 		for (c = argv[argc]; *c; c++)
