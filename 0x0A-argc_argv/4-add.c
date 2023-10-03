@@ -11,18 +11,20 @@
 int main(int argc, char **argv)
 {
 	int i;
+	char c;
 	unsigned int sum;
 
 	if (argc < 2)
 	{
 		printf("0\n");
-		return (0);
+		exit(EXIT_SUCCESS);
 	}
 
 	sum = 0;
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) == 0)
+		c = argv[i][0];
+		if (c < '0' || c > '9')
 		{
 			printf("Error\n");
 			return (1);
