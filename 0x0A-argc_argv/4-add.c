@@ -11,12 +11,19 @@
 int main(int argc, char **argv)
 {
 	int i;
+	char *c;
 	unsigned int sum;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!atoi(argv[i]))
-			return (printf("Error\n"), 1);
+		for (c = argv[i]; *c; c++)
+		{
+			if (*c < '0' || *c > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
 		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
