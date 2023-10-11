@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 /**
  * print_name - function that uses a pointer to an other
  * function to print a name.
@@ -6,5 +8,6 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if (name != NULL)
+		f(name);
 }
