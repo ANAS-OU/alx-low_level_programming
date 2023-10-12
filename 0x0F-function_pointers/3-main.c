@@ -7,7 +7,6 @@
  * main - program that performs simple operations
  * @argc: the count of argments.
  * @argv: the array of agrments.
- *
  * Return: result of operatoin followed by a new line.
  */
 int main(int argc, char *argv[])
@@ -20,7 +19,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (atoi(argv[3]) == 0 && (strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0))
+	if (atoi(argv[3]) == 0 && (!strcmp(argv[2], "/") || !strcmp(argv[2], "%")))
 	{
 		printf("Error\n");
 		exit(100);
