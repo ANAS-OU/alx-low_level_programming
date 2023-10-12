@@ -6,10 +6,11 @@
 /**
  * main - program that performs simple operations
  * @argc: the count of argments.
- * @argv: the array of agrments.
+ * @argv: the array of argments.
+ *
  * Return: result of operatoin followed by a new line.
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int rst;
 	int (*operation)(int, int);
