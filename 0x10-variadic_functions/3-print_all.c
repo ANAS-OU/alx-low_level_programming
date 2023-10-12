@@ -13,28 +13,31 @@ void print_all(const char * const format, ...)
 	char *separator = "";
 
 	va_start(args, format);
-	i = 0;
-	while (format[i])
+	if (format)
 	{
-		switch (format[i++])
+		i = 0;
+		while (format[i])
 		{
-			case 'c':
-				printf("%s%c", separator, (char)va_arg(args, int));
-				break;
-			case 'i':
-				printf("%s%d", separator, va_arg(args, int));
-				break;
-			case 'f':
-				printf("%s%f", separator, va_arg(args, double));
-				break;
-			case 's':
-				str = va_arg(args, char*);
-				printf("%s%s", separator, (str) ? str : "(nil)");
-				break;
-			default:
-				continue;
+			switch (format[i++])
+			{
+				case 'c':
+					printf("%s%c", separator, (char)va_arg(args, int));
+					break;
+				case 'i':
+					printf("%s%d", separator, va_arg(args, int));
+					break;
+				case 'f':
+					printf("%s%f", separator, va_arg(args, double));
+					break;
+				case 's':
+					str = va_arg(args, char*);
+					printf("%s%s", separator, (str) ? str : "(nil)");
+					break;
+				default:
+					continue;
+			}
+			separator = ", ";
 		}
-		separator = ", ";
 	}
 	va_end(args);
 	printf("\n");
