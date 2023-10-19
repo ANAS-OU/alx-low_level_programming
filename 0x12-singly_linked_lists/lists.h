@@ -28,5 +28,6 @@ typedef struct list_s
  * Functions Prototype
  *********************/
 size_t print_list(const list_t *h);
+size_t list_len(const list_t *h);
 
 #endif /* LISTS_H */
