@@ -10,7 +10,7 @@ int get_endianness(void)
 {
 	unsigned int n = 1; /* 0x01 */
 	int first_byte = (int) ((char *)&n)[0];
-	
+
 	/*
 	 * first_byte:
 	 * 0 - big endian.
