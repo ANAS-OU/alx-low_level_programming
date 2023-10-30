@@ -6,11 +6,11 @@
  * @filename: pointer to streamed file.
  * @letters: number of bytes to read and print.
  *
- * Return: bytes printed.
+ * Return: bytes printed, 0 when failed.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char buffer[BUFSIZE];
+	char *buffer;
 	ssize_t readed_bytes, printed_bytes;
 	int fd;
 
@@ -21,12 +21,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd < 0)
 		return (0);
 
+	buffer = malloc(sizeof(char) * letters);
+	if (!buffer)
+		return (0);
 	readed_bytes = read(fd, buffer, letters);
 	printed_bytes = write(STDOUT_FILENO, buffer, readed_bytes);
 	
-	close(fd);
 	if (readed_bytes != printed_bytes)
 		return (0);
 
+	close(fd);
+	free(buffer);
 	return (printed_bytes);
 }

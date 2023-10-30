@@ -5,13 +5,9 @@
  * Standard Libraries
  **********************/
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-
-/**********************
- * Defined Constantes
- **********************/
-#define BUFSIZE 1024
 
 /**********************
  * Functions Prototype
