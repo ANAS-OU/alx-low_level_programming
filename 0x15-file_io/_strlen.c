@@ -6,9 +6,9 @@
  * Return: the string length.
  */
 
-unsigned int _strlen(char *s)
+size_t _strlen(char *s)
 {
-	unsigned int len;
+	size_t len;
 
 	len = 0;
 	while (*s++)
