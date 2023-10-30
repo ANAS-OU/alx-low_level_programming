@@ -1,8 +1,9 @@
 /**
- * _strlen - function that returns the length of a string.
- * @s: pointer to a given string.
+ * _strlen - function that returns the length of
+ * a given string.
+ * @s: pointer to the given string.
  *
- * Return: the given string length.
+ * Return: the string length.
  */
 
 unsigned int _strlen(char *s)
@@ -12,5 +13,6 @@ unsigned int _strlen(char *s)
 	len = 0;
 	while (*s++)
 		len++;
+
 	return (len);
 }
