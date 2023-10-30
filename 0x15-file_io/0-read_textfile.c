@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_strlen.c"
 
 /**
  * read_textfile - function that reads a text file
@@ -13,18 +12,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char buffer[BUFSIZE];
 	ssize_t bytes;
-	FILE *pf;
+	int fd;
 
 	if (!filename)
 		return (0);
-	pf = fopen(filename, "r");
-	if (!pf)
+
+	fd = open(filename, O_RDONLY);
+	if (fd < 0)
 		return (0);
 
-	bytes = 0;
-	fread(buffer, letters, 1, pf);
-	bytes = write(STDOUT_FILENO, buffer, _strlen(buffer));
+	bytes = read(fd, buffer, letters);
+	write(STDOUT_FILENO, buffer, bytes);
 
-	fclose(pf);
+	close(fd);
 	return (bytes);
 }
