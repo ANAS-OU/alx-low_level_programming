@@ -31,9 +31,14 @@ int main(int argc, char **argv)
 		return (0);
 
 	readed_bytes = read(fd1, buffer, BUFSIZE);
+	while (readed_bytes)
+	{
 	writed_bytes = write(fd2, buffer, readed_bytes);
 	if (readed_bytes != writed_bytes)
 		error_handler(argv[2], 99);
+
+	readed_bytes = read(fd1, buffer, BUFSIZE);
+	}
 
 	if (close(fd1) == -1 || close(fd2) == -1)
 		error_handler(NULL, 100);
