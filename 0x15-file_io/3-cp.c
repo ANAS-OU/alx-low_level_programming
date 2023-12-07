@@ -22,13 +22,12 @@ int main(int argc, char **argv)
 	fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd1 == -1)
 		error_handler(argv[1], 98);
-
 	if (fd2 == -1)
 		error_handler(argv[2], 99);
 
 	buffer = malloc(sizeof(char) * BUFSIZE);
 	if (!buffer)
-		return (0);
+		error_handler(argv[2], 99);
 
 	readed_bytes = read(fd1, buffer, BUFSIZE);
 	while (readed_bytes)
