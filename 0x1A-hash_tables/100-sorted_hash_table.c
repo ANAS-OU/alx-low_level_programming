@@ -39,6 +39,8 @@ shash_table_t *shash_table_create(unsigned long int size)
  * Return: 1 if it succeeded, 0 otherwise
  */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
+{
+}
 
 
 /**
@@ -51,6 +53,8 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
  * or NULL if key couldn’t be found
  */
 char *shash_table_get(const shash_table_t *ht, const char *key)
+{
+}
 
 
 /**
@@ -61,6 +65,8 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
  * Return: nothing
  */
 void shash_table_print(const shash_table_t *ht)
+{
+}
 
 
 /**
@@ -71,3 +77,5 @@ void shash_table_print(const shash_table_t *ht)
  * Return: nothing
  */
 void shash_table_delete(shash_table_t *ht)
+{
+}
