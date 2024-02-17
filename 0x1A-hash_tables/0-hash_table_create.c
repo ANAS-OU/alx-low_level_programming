@@ -19,7 +19,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	new_ht->size = size;
 	new_ht->array = malloc(size * sizeof(char *));
 
-	if (!new_ht->array)
+	if (!(new_ht->array))
 	{
 		free(new_ht);
 		return (NULL);
